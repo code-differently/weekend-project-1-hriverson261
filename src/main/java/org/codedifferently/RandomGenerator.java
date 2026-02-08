@@ -5,6 +5,7 @@ import java.util.Random;
 public class RandomGenerator {
     public static int visitID(){
         Random rand = new Random();
+
         int visitNum = rand.nextInt(1000,100000);
         return visitNum;
     }
