@@ -6,20 +6,22 @@ public class RandomGenerator {
     public static int visitID(){
         Random rand = new Random();
 
-        int visitNum = rand.nextInt(1000,100000);
+        int visitNum = rand.nextInt(100,999);
         return visitNum;
     }
 
     public static double itemPrice(){
         Random rand = new Random();
         double priceItem = rand.nextDouble(5.99,59.99);
-        return priceItem;
+        return Math.round(priceItem);
     }
 
-    public static double fee(){
+    public static double tax(){
         Random rand = new Random();
-        double fee = rand.nextDouble(.99,9.99);
-        return fee;
+        double tax = (rand.nextDouble(10))/100;
+        return tax;
     }
+
+
 
 }
